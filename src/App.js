@@ -1,4 +1,6 @@
 import "./App.css";
+import "./Animation.css";
+
 import Connexion from "./components/Connexion";
 import ChatBox from "./components/ChatBox";
 import NotFound from "./components/NotFound";

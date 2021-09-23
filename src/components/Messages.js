@@ -1,10 +1,8 @@
-import { useParams } from "react-router-dom";
-
-const Messages = ({ message }) => {
-  const { pseudo } = useParams();
+const Messages = ({ message, pseudo }) => {
   return (
     <p className="user-message">
-      {pseudo} : {message}
+      <strong>{pseudo} : </strong>
+      {message}
     </p>
   );
 };

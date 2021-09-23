@@ -6,6 +6,7 @@ const Connexion = () => {
   const [goToChat, setGoToChat] = useState(false);
 
   if (goToChat) {
+    // Pour changer l'URL et accéder à la page de connexion
     return <Redirect push to={`/pseudo/${pseudo}`} />;
   }
 
