@@ -2,6 +2,7 @@ import "./App.css";
 import "./Animation.css";
 
 import Connexion from "./components/Connexion";
+import ChatBoxx from "./components/ChatBoxx";
 import ChatBox from "./components/ChatBox";
 import NotFound from "./components/NotFound";
 
@@ -15,7 +16,7 @@ function App() {
           <Connexion />
         </Route>
         <Route path="/pseudo/:pseudo">
-          <ChatBox />
+          <ChatBoxx />
         </Route>
         <Route>
           <NotFound />

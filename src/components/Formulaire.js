@@ -48,7 +48,7 @@ const Formulaire = ({ addMessage }) => {
       />
 
       <div className="info">{length}</div>
-      <button type="submit">Envoyer!</button>
+      <button type="submit">Envoyer !</button>
     </form>
   );
 };

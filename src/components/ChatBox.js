@@ -48,7 +48,7 @@ class ChatBox extends Component {
     const messages = Object.keys(this.state.messages)
       // Le map va boucler à l'intérieur des tableaux, pour chaque clé elle va nous renvoyer le component message
       .map((key) => (
-        <CSSTransition key={key} timeout={2000} classNames="fade">
+        <CSSTransition key={key} timeout={200} classNames="fade">
           <Messages
             message={this.state.messages[key].message}
             pseudo={this.state.messages[key].pseudo}
@@ -67,27 +67,5 @@ class ChatBox extends Component {
     );
   }
 }
-
-// const ChatBox = () => {
-//   const { pseudo } = useParams();
-
-//   const [messagesTousLesMessages, setMessagesTousLesMessages] = useState({});
-
-//   const addMessage = (message) => {
-//     messagesTousLesMessages[`message-${Date.now()}`] = message;
-//     setMessagesTousLesMessages({ messagesTousLesMessages });
-//   };
-
-//   return (
-//     <div className="chatBox">
-//       <div>
-//         <div className="messages">
-//           <Messages />
-//         </div>
-//       </div>
-//       <Formulaire addMessage={addMessage} pseudo={pseudo} />
-//     </div>
-//   );
-// };
 
 export default ChatBox;
