@@ -3,15 +3,15 @@ import Messages from "./Messages";
 import firebase from "firebase/app";
 import "firebase/database";
 
+import React, { useState, useEffect, useRef } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
 firebase.initializeApp({
   apiKey: "AIzaSyBYFEZC5NF__bHTB7d_jd88N1RziVqEZ78",
   authDomain: "chatbox-react-a439e.firebaseapp.com",
   databaseURL:
     "https://chatbox-react-a439e-default-rtdb.europe-west1.firebasedatabase.app",
 });
-
-import React, { useState, useEffect, useRef } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const ChatBoxx = () => {
   const [messages, setMessages] = useState({});
