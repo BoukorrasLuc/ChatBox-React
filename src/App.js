@@ -3,7 +3,6 @@ import "./Animation.css";
 
 import Connexion from "./components/Connexion";
 import ChatBoxx from "./components/ChatBoxx";
-import ChatBox from "./components/ChatBox";
 import NotFound from "./components/NotFound";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
