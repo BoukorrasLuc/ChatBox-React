@@ -13,11 +13,13 @@ const Connexion = () => {
     e.preventDefault();
     setGoToChat(true);
   };
+
   return (
     <div className="connexionBox">
       <form className="connexion" onSubmit={handleSubmit}>
         <input
           type="text"
+          pattern="[a-zA-Z]*[0-9]*"
           placeholder="Pseudo"
           required
           value={pseudo}

@@ -41,7 +41,7 @@ const Formulaire = ({ addMessage }) => {
     <form className="form" onSubmit={handleSubmit}>
       <textarea
         required
-        maxLength={length}
+        maxLength={140}
         onChange={handleChange}
         value={message}
         onKeyUp={handleKeyUp}
