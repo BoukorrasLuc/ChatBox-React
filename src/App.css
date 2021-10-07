@@ -28,6 +28,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column;
 }
 .connexion {
   max-width: 500px;
@@ -61,6 +62,11 @@ body {
 
 .box > * {
   width: 100%;
+}
+
+.connexionBox .pseudo-error-message {
+  color: red;
+  margin-top: 10px;
 }
 
 /* Messages */

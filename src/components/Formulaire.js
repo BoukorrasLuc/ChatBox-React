@@ -26,8 +26,7 @@ const Formulaire = ({ addMessage }) => {
 
   const handleChange = (e) => {
     const message = e.target.value;
-    setLength(length - 1);
-
+    setLength(140 - message.length);
     setMessage(message);
   };
 
