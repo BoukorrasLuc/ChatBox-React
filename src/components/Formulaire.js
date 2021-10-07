@@ -6,6 +6,7 @@ const Formulaire = ({ addMessage }) => {
 
   const [message, setMessage] = useState("");
   const [length, setLength] = useState(140);
+  const [errorMessage, setErrorMessage] = useState();
 
   const createMessage = () => {
     const messageDansLaBox = {
@@ -14,14 +15,13 @@ const Formulaire = ({ addMessage }) => {
     };
 
     addMessage(messageDansLaBox);
-
     setMessage("");
     setLength(140);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createMessage();
+    checkCharLengthMsg(message);
   };
 
   const handleChange = (e) => {
@@ -36,6 +36,14 @@ const Formulaire = ({ addMessage }) => {
     }
   };
 
+  function checkCharLengthMsg(message) {
+    if (message.length > 140) {
+      setErrorMessage("Veuillez un message de moins de 140 caractères");
+    } else {
+      createMessage();
+    }
+  }
+
   return (
     <form className="form" onSubmit={handleSubmit}>
       <textarea
@@ -47,6 +55,7 @@ const Formulaire = ({ addMessage }) => {
       />
 
       <div className="info">{length}</div>
+      <div className="error-message">{errorMessage}</div>
       <button type="submit">Envoyer !</button>
     </form>
   );
