@@ -26,6 +26,7 @@ const Connexion = () => {
     }
   }
 
+  // Envoie du Formulaire en testant la fonction checkPseudo().
   const handleSubmit = (e) => {
     e.preventDefault();
     checkPseudo();
