@@ -42,6 +42,7 @@ const Formulaire = ({ addMessage }) => {
   // Fonction pour analyser la chaine de caractère est inférieur à 140, si la condition est bonne,on crée le message.
   function checkCharLengthMsg(message) {
     if (message.length > 140) {
+      // window.location.reload();
       setErrorMessage("Veuillez un message de moins de 140 caractères");
     } else {
       createMessage();
